@@ -1,4 +1,4 @@
-package com.syntel.hackathon;
+package com.syntel.hackathon.model;
 
 public class Server {
 	private String name;
