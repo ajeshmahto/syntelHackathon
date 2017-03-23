@@ -4,23 +4,15 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.syntel.hackathon.model.Input;
-import com.syntel.hackathon.model.Server;
 
 @RestController
 public class HealthCheckController {
 	
-	@GetMapping("/home")
-	public Server home(){
-		Server server = new Server("dev","191.10.10.5","linux", "http://v01dev.com:8080/");
-		return server;
-	}
-
 	
 	@PostMapping("/healthcheck")
 	public String check(@RequestBody Input input){

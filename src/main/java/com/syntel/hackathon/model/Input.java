@@ -1,6 +1,16 @@
 package com.syntel.hackathon.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+
+
+@Entity
 public class Input {
+	@Id @GeneratedValue
+	private Long id;
+	private String name;
 	private String host;
 	private int timeout;
 	
@@ -11,6 +21,20 @@ public class Input {
 		super();
 		this.host = host;
 		this.timeout = timeout;
+	}
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setId(Long id) {
+		this.id = id;
 	}
 	public String getHost() {
 		return host;
